@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Developer Portfolio</title>
+    <meta name="description" content="Portfolio of a passionate Mobile Developer specializing in iOS and Android apps.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Scripts -->
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="nav-container">
+            <a href="#hero" class="logo">Dev<span class="accent">.</span></a>
+            <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+                &#9776;
+            </button>
+            <ul class="nav-links">
+                <li><a href="#hero" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="hero-section">
+            <div class="hero-bg-elements">
+                <div class="bg-orb orb-1" data-speed="0.05"></div>
+                <div class="bg-orb orb-2" data-speed="-0.03"></div>
+            </div>
+            <div class="container hero-grid">
+                <div class="hero-content">
+                    <p class="eyebrow" data-speed="0.02"><span id="typewriter-emoji" class="emoji-animate">👋</span>
+                        <span id="typewriter-text">Hello, I'm Devin De Silva</span><span class="cursor">|</span>
+                    </p>
+                    <h1 class="headline" data-speed="0.04">Building <span class="gradient-text">Mobile
+                            Experiences</span> that matter.</h1>
+                    <p class="subheadline" data-speed="0.03">Designing and building iOS, Android, and cross-platform
+                        apps with an emphasis on clean architecture, refined UI, and performance.</p>
+                    <div class="cta-group" data-speed="0.03">
+                        <a href="#projects" class="btn btn-primary">View Work</a>
+                        <a href="#contact" class="btn btn-secondary">Contact Me</a>
+                    </div>
+                </div>
+                <div class="hero-visual" data-speed="-0.02">
+                    <div class="avatar-container">
+                        <div class="avatar-glow"></div>
+                        <img src="assets/images/avatar.png" alt="Developer Avatar" class="avatar-img">
+
+                        <!-- Floating Tech Icons -->
+                        <!-- 1. Apple (Keep existing but wrapped in SVG container structure if needed, or just text? sticking to consistent SVGs is better, but user said keep. I'll replace with SVG for consistency) -->
+                        <div class="tech-badge badge-1" data-speed="0.08" title="iOS">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" width="24" height="24"
+                                fill="currentColor">
+                                <path
+                                    d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 52.3-11.4 69.5-34.3z" />
+                            </svg>
+                        </div>
+
+                        <!-- 2. Android -->
+                        <div class="tech-badge badge-2" data-speed="0.06" title="Android">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" width="24" height="24"
+                                fill="#3DDC84">
+                                <path
+                                    d="M420.55,301.93a24,24,0,1,1,24-24,24,24,0,0,1-24,24m-265.1,0a24,24,0,1,1,24-24,24,24,0,0,1-24,24m273.7-144.48,47.94-83a10,10,0,1,0-17.27-10h0l-48.54,84.07a301.25,301.25,0,0,0-246.56,0L116.18,64.45a10,10,0,1,0-17.27,10h0l47.94,83C64.53,202.22,8.24,285.55,0,384H576c-8.24-98.45-64.54-181.78-146.85-226.55" />
+                            </svg>
+                        </div>
+
+                        <!-- 3. Flutter -->
+                        <div class="tech-badge badge-3" data-speed="0.07" title="Flutter">
+                            <img src="assets/images/badges/flutter.png" alt="Flutter" class="badge-icon">
+                        </div>
+
+                        <!-- 4. Swift -->
+                        <div class="tech-badge badge-4" data-speed="0.05" title="Swift">
+                            <img src="assets/images/badges/swift.png" alt="Swift" class="badge-icon">
+                        </div>
+
+                        <!-- 5. Xcode (Hammer) -->
+                        <div class="tech-badge badge-5" data-speed="0.09" title="Xcode">
+                            <img src="assets/images/badges/xcode.png" alt="Xcode" class="badge-icon">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+            <!-- Social Deck -->
+            <div class="social-deck">
+                <a href="https://www.linkedin.com/in/devin-de-silva/" class="social-icon" aria-label="LinkedIn">
+                    <span class="tooltip">LinkedIn</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="currentColor">
+                        <path
+                            d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+                    </svg>
+                </a>
+                <a href="https://x.com/Devin_De_Silva" class="social-icon" aria-label="Twitter">
+                    <span class="tooltip">Twitter</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="currentColor">
+                        <path
+                            d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                    </svg>
+                </a>
+                <a href="https://medium.com/@devindemalaka" class="social-icon" aria-label="Medium">
+                    <span class="tooltip">Medium</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="currentColor">
+                        <path
+                            d="M0 0v24h24V0H0zm19.938 5.686L18.651 6.92c-.118.118-.177.265-.177.413v9.74c0 .147.059.295.177.413l1.287 1.234v.295h-5.31l.001-.295 1.003-.914c.118-.118.177-.265.177-.413V7.602l-3.51 9.388h-.351l-4.04-9.388v7.265c-.059.265.059.56.295.796l1.621 2.005v.295H4.297v-.295l1.621-2.005c.236-.236.354-.531.295-.796V7.631c0-.147-.059-.295-.177-.413L4.859 6.098v-.295h5.132l3.483 8.167 3.334-8.167h3.13v.295-.412z" />
+                    </svg>
+                </a>
+                <a href="https://developers.google.com/profile/u/115108934596000670378" class="social-icon"
+                    aria-label="Google">
+                    <span class="tooltip">Google</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="currentColor">
+                        <path
+                            d="M12.545,10.239v3.821h5.445c-0.712,2.315-2.647,3.972-5.445,3.972c-3.332,0-6.033-2.701-6.033-6.032s2.701-6.032,6.033-6.032c1.498,0,2.866,0.549,3.921,1.453l2.814-2.814C17.503,2.988,15.139,2,12.545,2C7.021,2,2.543,6.477,2.543,12s4.478,10,10.002,10c8.396,0,10.249-7.85,9.426-11.748L12.545,10.239z" />
+                    </svg>
+                </a>
+                <a href="https://github.com/devinMalaka" class="social-icon" aria-label="GitHub">
+                    <span class="tooltip">GitHub</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="currentColor">
+                        <path
+                            d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                    </svg>
+                </a>
+                <div class="social-divider"></div>
+                <a href="assets/Devin_DeSilva_MobileDeveloper_CV.pdf" class="social-icon" aria-label="Download CV"
+                    download>
+                    <span class="tooltip">Download CV</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                        <polyline points="7 10 12 15 17 10" />
+                        <line x1="12" y1="15" x2="12" y2="3" />
+                    </svg>
+                </a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section about-section">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+
+                <div class="about-container">
+                    <div class="about-img-wrapper">
+                        <div class="wave"></div>
+                        <div class="wave"></div>
+                        <div class="wave"></div>
+                        <img src="assets/images/profile_wave.jpg" alt="Profile Picture" class="about-img">
+                        <div class="active-badge">
+                            <span class="pulse"></span>
+                        </div>
+                    </div>
+
+                    <div class="about-content">
+                        <div class="info-cards">
+                            <!-- Experience Card -->
+                            <div class="info-card">
+                                <div class="info-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path
+                                            d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <h3 class="card-title">Experience</h3>
+                                <p class="highlight-text xp-years">3+ Years</p>
+                            </div>
+
+                            <!-- Education Card -->
+                            <div class="info-card">
+                                <div class="info-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+                                        <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="card-title">Education</h3>
+                                <div class="edu-flip-container">
+                                    <div class="edu-flipper">
+                                        <div class="edu-front">
+                                            <p class="highlight-text edu-text">BEng (Hons) Software Engineering</p>
+                                        </div>
+                                        <div class="edu-back">
+                                            <p class="highlight-text edu-text">MSc Data Science</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="about-text-container">
+                            <p>
+                                I’m a mobile application developer with experience building high-quality iOS, Android,
+                                and cross-platform applications using Swift, Kotlin, and Flutter. I focus on writing
+                                <span class="highlight-phrase">clean, maintainable code</span> and delivering <span
+                                    class="highlight-phrase">intuitive user experiences</span> backed by <span
+                                    class="highlight-phrase">solid
+                                    architecture</span>.
+                            </p>
+                            <p>
+                                With a strong foundation in software engineering and hands-on experience across the full
+                                mobile development lifecycle, from idea to App Store and Play Store release. I enjoy
+                                turning complex problems into <span class="highlight-phrase">simple, scalable
+                                    solutions</span>. I’m particularly interested in
+                                building products that combine <span class="highlight-phrase">thoughtful design</span>
+                                with <span class="highlight-phrase">reliable performance</span>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section skills-section">
+            <div class="container">
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-card">
+                        <h3>iOS</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Swift</span>
+                            <span class="skill-tag">SwiftUI</span>
+                            <span class="skill-tag">UIKit</span>
+                            <span class="skill-tag">Combine</span>
+                            <span class="skill-tag">MVVM</span>
+                            <span class="skill-tag">Clean Architecture</span>
+                            <span class="skill-tag">Core Data</span>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Android</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Kotlin</span>
+                            <span class="skill-tag">Android SDK</span>
+                            <span class="skill-tag">Jetpack Compose</span>
+                            <span class="skill-tag">Coroutines</span>
+                            <span class="skill-tag">MVVM</span>
+                            <span class="skill-tag">Clean Architecture</span>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Cross-Platform</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Flutter</span>
+                            <span class="skill-tag">Dart</span>
+                            <span class="skill-tag">Bloc</span>
+                            <span class="skill-tag">Provider</span>
+                            <span class="skill-tag">Riverpod</span>
+                            <span class="skill-tag">MVVM</span>
+                            <span class="skill-tag">Clean Architecture</span>
+                            <span class="skill-tag">REST API Integration</span>
+                        </div>
+                    </div>
+                    <div class="skill-card">
+                        <h3>Tools</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">GitHub</span>
+                            <span class="skill-tag">Firebase</span>
+                            <span class="skill-tag">Postman</span>
+                            <span class="skill-tag">Figma</span>
+                            <span class="skill-tag">TestFlight</span>
+                            <span class="skill-tag">AppStore Connect</span>
+                            <span class="skill-tag">Google Play Console</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section experience-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Work Experience</h2>
+                </div>
+
+                <div class="timeline">
+                    <!-- Item 1 (Right/Odd) -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <div class="header-text">
+                                    <h3>Software Engineer – Mobile</h3>
+                                    <h4 class="company-name">Proitzen | Kinderm8 Family Lounge</h4>
+                                </div>
+                                <div class="company-logo">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                        <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div class="timeline-meta">
+                                <span class="meta-date">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="calendar-icon">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                                    </svg>
+                                    May 2022 — Sep 2023
+                                </span>
+                                <span class="status-badge current">Latest</span>
+                            </div>
+
+                            <p class="timeline-desc">Built and maintained cross-platform Flutter applications for a
+                                childcare management platform. Implemented clean, scalable architecture and contributed
+                                across the full mobile app lifecycle, from feature development to CI/CD and production
+                                releases.</p>
+
+                            <div class="timeline-tags">
+                                <span class="tag">Flutter</span>
+                                <span class="tag">Dart</span>
+                                <span class="tag">Clean Architecture</span>
+                                <span class="tag">Provider</span>
+                                <span class="tag">REST APIs</span>
+                                <span class="tag">Firebase</span>
+                                <span class="tag">Amazon S3</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 (Left/Even) -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <div class="header-text">
+                                    <h3>Associate Software Engineer - Mobile</h3>
+                                    <h4 class="company-name">Proitzen | Kinderm8 Family Lounge</h4>
+                                </div>
+                                <div class="company-logo">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M3 21h18"></path>
+                                        <path d="M5 21V7l8-4 8 4v14"></path>
+                                        <path d="M17 21v-5a2 2 0 0 0-2-2h-3a2 2 0 0 0-2 2v5"></path>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div class="timeline-meta">
+                                <span class="meta-date">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="calendar-icon">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                                    </svg>
+                                    Apr 2021 — May 2022
+                                </span>
+                            </div>
+
+                            <p class="timeline-desc">Improved application stability by resolving 120+ technical issues
+                                through regression testing and refactoring, achieving a 25% reliability gain.
+                                Contributed to UI and performance enhancements, supported API integrations, and
+                                collaborated within an agile development workflow.</p>
+
+                            <div class="timeline-tags">
+                                <span class="tag">Flutter</span>
+                                <span class="tag">Dart</span>
+                                <span class="tag">REST APIs</span>
+                                <span class="tag">Firebase Crashlytics</span>
+                                <span class="tag">Git</span>
+                                <span class="tag">Figma</span>
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 (Right/Odd) -->
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <div class="header-text">
+                                    <h3>Trainee Software Engineer - Intern</h3>
+                                    <h4 class="company-name">Kingslake Engineering Systems</h4>
+                                </div>
+                                <div class="company-logo">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M3 21h18"></path>
+                                        <path d="M5 21V7l8-4 8 4v14"></path>
+                                        <path d="M17 21v-5a2 2 0 0 0-2-2h-3a2 2 0 0 0-2 2v5"></path>
+                                    </svg>
+                                </div>
+                            </div>
+
+                            <div class="timeline-meta">
+                                <span class="meta-date">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round" class="calendar-icon">
+                                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                                    </svg>
+                                    Jul 2018 — May 2019
+                                </span>
+                            </div>
+
+                            <p class="timeline-desc">Gained hands-on experience working on an ERP-based warehouse
+                                management system, focusing on bug fixes, UI consistency, and performance tuning.</p>
+
+                            <div class="timeline-tags">
+                                <span class="tag">jQuery</span>
+                                <span class="tag">Progress Rollbase</span>
+                                <span class="tag">OpenEdge 4GL</span>
+                                <span class="tag">SQL</span>
+                                <span class="tag">Git </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="section projects-section">
+            <div class="container">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="projects-container">
+                    <button class="nav-btn prev-btn" aria-label="Previous Project">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+
+                    <div class="projects-slider">
+                        <!-- Project 1 -->
+                        <article class="project-card" data-id="finance">
+                            <div class="project-image">
+                                <img src="assets/images/finance_app.png" alt="Finance Tracker Interface" loading="lazy">
+                            </div>
+                            <div class="project-content">
+                                <h3>Finance Tracker App</h3>
+                                <p class="project-tags"><span>SwiftUI</span> <span>CoreData</span></p>
+                                <p>A personal finance tracking application focusing on data visualization and intuitive
+                                    entry.</p>
+                                <a href="#" class="btn-text">View Case Study &rarr;</a>
+                            </div>
+                        </article>
+
+                        <!-- Project 2 -->
+                        <article class="project-card" data-id="social">
+                            <div class="project-image">
+                                <img src="assets/images/social_app.png" alt="Social Connect Interface" loading="lazy">
+                            </div>
+                            <div class="project-content">
+                                <h3>Social Connect</h3>
+                                <p class="project-tags"><span>React Native</span> <span>Firebase</span></p>
+                                <p>Real-time social networking app with chat features and media sharing.</p>
+                                <a href="#" class="btn-text">View Case Study &rarr;</a>
+                            </div>
+                        </article>
+
+                        <!-- Project 3 (Duplicate for demo) -->
+                        <article class="project-card" data-id="ecommerce">
+                            <div class="project-image">
+                                <div class="img-placeholder">
+                                    <span>E-Commerce App</span>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3>ShopMobile</h3>
+                                <p class="project-tags"><span>Flutter</span> <span>Stripe</span></p>
+                                <p>A seamless shopping experience with real-time inventory and secure checkout flow.</p>
+                                <a href="#" class="btn-text">View Case Study &rarr;</a>
+                            </div>
+                        </article>
+
+                        <!-- Project 4 (Duplicate for demo) -->
+                        <article class="project-card" data-id="health">
+                            <div class="project-image">
+                                <div class="img-placeholder">
+                                    <span>Health & Fitness</span>
+                                </div>
+                            </div>
+                            <div class="project-content">
+                                <h3>HealthMate</h3>
+                                <p class="project-tags"><span>Kotlin</span> <span>HealthKit</span></p>
+                                <p>Activity tracking dashboard integrating with wearable devices for health insights.
+                                </p>
+                                <a href="#" class="btn-text">View Case Study &rarr;</a>
+                            </div>
+                        </article>
+                    </div>
+
+                    <button class="nav-btn next-btn" aria-label="Next Project">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-content">
+                        <h2 class="section-title">Let's Connect</h2>
+                        <p class="contact-text animate-text">Interested in working together? I'm always open to discuss
+                            new projects and opportunities.</p>
+                    </div>
+
+                    <div class="contact-form-wrapper">
+                        <form action="https://formspree.io/f/meeovnwq" method="POST" class="contact-form">
+                            <div class="form-group">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" id="name" name="name" class="form-input" placeholder="Your Name"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" id="email" name="email" class="form-input"
+                                    placeholder="your@email.com" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea id="message" name="message" class="form-input form-textarea"
+                                    placeholder="Tell me about your project..." rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary submit-btn">
+                                Send Message
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" class="send-icon">
+                                    <line x1="22" y1="2" x2="11" y2="13"></line>
+                                    <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Devin De Silva. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Project Detail Modal -->
+    <div id="project-modal" class="modal-overlay" aria-hidden="true">
+        <div class="modal-container">
+            <button class="modal-close" aria-label="Close Modal">&times;</button>
+            <div class="modal-header">
+                <h3 id="modal-title">Project Title</h3>
+                <div id="modal-tags" class="project-tags"></div>
+            </div>
+            <div class="modal-body">
+                <div id="modal-image-container" class="modal-image-wrapper">
+                    <!-- Image injected via JS -->
+                </div>
+                <div id="modal-links" class="modal-links">
+                    <!-- Links injected via JS -->
+                </div>
+                <div id="modal-description" class="modal-description">
+                    <!-- Description injected via JS -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

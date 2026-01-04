@@ -1,0 +1,84 @@
+
+/* Animated Avatar & Badge */
+.about-img-wrapper {
+    position: relative;
+    width: 300px; /* Fixed size for circle */
+    height: 300px;
+    border-radius: 50%; /* Circle shape */
+    margin: 0 auto;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    animation: floating 6s ease-in-out infinite;
+    /* Override previous styles */
+    aspect-ratio: auto; 
+    filter: none;
+    overflow: visible; /* Allow badge to sit on edge */
+}
+
+.about-img-wrapper:hover {
+    filter: none; /* No grayscale on hover needed */
+}
+
+.about-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%; /* Ensure image clips to circle */
+    border: 4px solid rgba(255, 255, 255, 0.1);
+}
+
+.active-badge {
+    position: absolute;
+    bottom: 25px; /* Adjust based on circle size */
+    right: 25px;
+    width: 24px;
+    height: 24px;
+    background: #4ade80; /* Bright Green */
+    border: 3px solid var(--bg-primary); /* Match bg to cut circle */
+    border-radius: 50%;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pulse {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    border-radius: inherit;
+    animation: ripple 2s infinite cubic-bezier(0.4, 0, 0.6, 1);
+    z-index: -1;
+    opacity: 0.6;
+}
+
+@keyframes floating {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(1);
+        opacity: 0.6;
+    }
+    100% {
+        transform: scale(3);
+        opacity: 0;
+    }
+}
+
+/* Responsive adjustment for avatar */
+@media (max-width: 768px) {
+    .about-img-wrapper {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .active-badge {
+        bottom: 20px;
+        right: 20px;
+        width: 20px;
+        height: 20px;
+    }
+}

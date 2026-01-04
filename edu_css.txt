@@ -1,0 +1,22 @@
+
+/* Education Text Emphasis */
+.edu-text {
+    font-size: 1.1rem !important; /* Smaller than XP because text is long */
+    font-weight: 700 !important;
+    line-height: 1.4;
+    color: #4ade80; 
+    background: linear-gradient(to right, #4ade80, #22d3ee);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0.5rem 0;
+    transition: transform 0.3s ease;
+}
+
+.edu-text:hover {
+    transform: scale(1.05);
+}
+
+/* Stack them clearly */
+.edu-text + .edu-text {
+    margin-top: 0.2rem;
+}

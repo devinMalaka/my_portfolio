@@ -1,0 +1,89 @@
+
+/* Global Mobile Adjustments */
+@media (max-width: 768px) {
+    /* About Me Section */
+    .about-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    .about-content {
+        align-items: center; /* Center flex items */
+    }
+
+    /* Avatar Sizing */
+    .about-img-wrapper {
+        width: 200px;
+        height: 200px;
+        margin-bottom: 2rem;
+    }
+    
+    .active-badge {
+        width: 18px;
+        height: 18px;
+        bottom: 15px;
+        right: 15px;
+    }
+
+    /* Info Cards Grid */
+    .info-cards {
+        grid-template-columns: 1fr;
+        width: 100%;
+        max-width: 400px; /* Prevent cards from stretching too wide */
+    }
+
+    /* Experience Text */
+    .xp-years {
+        font-size: 2rem !important; /* Smaller on mobile */
+    }
+
+    /* Education Flip Animation */
+    .edu-flip-container {
+        height: 4.5rem; /* Increase height for wrapped text */
+    }
+
+    .edu-text {
+        font-size: 1rem !important;
+        white-space: normal !important; /* Allow wrapping */
+        line-height: 1.2;
+    }
+    
+    /* Text layout adjustment */
+    .about-text-container p {
+        text-align: center; /* Center bio text on mobile */
+        font-size: 0.95rem;
+    }
+
+    /* Timeline Adjustments */
+    .timeline::before {
+        left: 30px; /* Move line to left side */
+    }
+
+    .timeline-item {
+        width: 100%;
+        padding-left: 70px; /* Space for line/dot */
+        padding-right: 0;
+    }
+
+    .timeline-item:nth-child(even) {
+        left: 0; /* Reset alternating layout */
+    }
+
+    .timeline-item:nth-child(odd) {
+        /* No change needed usually, but ensure left align */
+    }
+    
+    .timeline-item:nth-child(odd) .timeline-date,
+    .timeline-item:nth-child(even) .timeline-date {
+        position: static;
+        margin-bottom: 0.5rem;
+        display: block;
+        text-align: left;
+        transform: none;
+    }
+    
+    .timeline-dot {
+        left: 30px; /* Match line position */
+    }
+}
