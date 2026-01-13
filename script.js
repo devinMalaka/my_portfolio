@@ -202,6 +202,53 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Project Details Data
     const projectDetails = {
+        lokey: {
+            title: "Lokey Password Vault",
+            tags: ["Swift", "SwiftUI", "CoreData", "FaceID"],
+            image: "assets/images/lokey_vault.png",
+            description: `
+                <h4>Overview</h4>
+                <p>Unlock your digital life with LOKEY. Designed for Privacy, Built for You. Organize and protect your accounts with ease and precision. Securely view, edit, and manage your sensitive details with confidence.</p>
+                
+                <h4>Key Features</h4>
+                <ul>
+                    <li><strong>Secure Storage:</strong> Safely store passwords and sensitive information.</li>
+                    <li><strong>FaceID Integration:</strong> Quick and secure access using biometric authentication.</li>
+                    <li><strong>Privacy First:</strong> Data is stored locally on your device.</li>
+                </ul>
+
+                <h4>Technical Highlights</h4>
+                <p>Built using modern SwiftUI and CoreData for robust local persistence, ensuring your data is always available and secure.</p>
+            `,
+            links: {
+                github: "https://github.com/devinMalaka/lokey-ios",
+                appstore: "https://apps.apple.com/us/app/lokey-password-vault/id6755841213"
+                // No playstore link
+            }
+        },
+        smart_layout: {
+            title: "Smart Layout",
+            tags: ["Flutter", "Dart", "Responsive", "Open Source"],
+            image: "assets/images/smart_layout.png",
+            description: `
+                <h4>Overview</h4>
+                <p>A Flutter package that provides intelligent list-to-grid layouts for responsive collection UIs. It simplifies building adaptive interfaces that look great on phones, tablets, and desktops by automatically detecting device types.</p>
+                
+                <h4>Key Features</h4>
+                <ul>
+                    <li><strong>Device Aware:</strong> Uses shortest-side calculations to accurately detect Phones, Tablets, and Desktops.</li>
+                    <li><strong>Smart Switching:</strong> Automatically switches between List and Grid layouts based on screen size.</li>
+                    <li><strong>Simple API:</strong> Provides easy-to-use widgets like <code>SmartLayoutBuilder</code> and <code>SmartCollectionLayout</code>.</li>
+                </ul>
+
+                <h4>Technical Highlights</h4>
+                <p>Designed with a clean, opinionated API to reduce boilerplate code for responsive designs in Flutter applications. Published on Pub.dev.</p>
+            `,
+            links: {
+                github: "https://github.com/devinMalaka/smart_layout",
+                pubdev: "https://pub.dev/packages/smart_layout"
+            }
+        },
         finance: {
             title: "Finance Tracker App",
             tags: ["SwiftUI", "CoreData", "Combine"],
@@ -342,6 +389,10 @@ document.addEventListener('DOMContentLoaded', () => {
             if (data.links.appstore) {
                 linksHtml += `<a href="${data.links.appstore}" target="_blank" class="modal-btn btn-outline" aria-label="Download on App Store"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor" style="margin-right: 0.5rem;"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.68-.83 1.14-1.99 1.01-3.15-1.02.05-2.29.69-3.02 1.55-.63.75-1.18 1.95-1.02 3.09 1.14.09 2.33-.64 3.03-1.49z"/></svg>App Store</a>`;
             }
+            if (data.links.pubdev) {
+                // Using a generic package icon or code icon for Pub.dev
+                linksHtml += `<a href="${data.links.pubdev}" target="_blank" class="modal-btn btn-outline" aria-label="View on Pub.dev"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 0.5rem;"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>Pub.dev</a>`;
+            }
         }
         modalLinks.innerHTML = linksHtml;
 
@@ -471,10 +522,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (animateText) {
         const text = animateText.textContent;
         animateText.textContent = '';
-        
+
         // Split by space but preserve spaces
         const words = text.split(' ');
-        
+
         words.forEach((word, index) => {
             const span = document.createElement('span');
             span.textContent = word + ' ';
@@ -493,7 +544,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         }, { threshold: 0.5 });
-        
+
         textObserver.observe(animateText);
     }
 });

@@ -724,12 +724,7 @@ button {
 }
 
 .contact-content {
-    order: 2;
-    /* Form first on mobile usually? Or Text?  User said: wrap text to words and move form to right. 
-                 Default HTML order: content, form-wrapper.
-                 So on desktop grid: content (left), form-wrapper (right).
-                 On mobile (1 col): content (top), form-wrapper (bottom).
-                 Perfect. No order change needed. */
+    /* order: 2; Removed to let natural DOM order place text left and form right */
 }
 
 /* Text Styling */
@@ -1091,6 +1086,10 @@ button {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    width: 100%;
+    /* Force full width */
+    box-sizing: border-box;
+    /* Include padding in width */
 }
 
 .timeline-content:hover {
@@ -1208,15 +1207,24 @@ button {
 
     .timeline-item {
         width: 100%;
+        float: none;
+        clear: both;
         padding-left: 3.5rem;
         padding-right: 0;
         margin-bottom: 2.5rem;
+        box-sizing: border-box;
     }
 
     .timeline-item:nth-child(odd),
     .timeline-item:nth-child(even) {
         left: 0;
+        float: none;
+        transform: none;
+        margin-top: 0;
+        margin-bottom: 2.5rem;
         padding-left: 3.5rem;
+        padding-right: 0;
+        text-align: left;
     }
 
     .timeline-dot,
@@ -1961,53 +1969,16 @@ button {
     }
 
     /* Floating Social Deck Mobile Adjustments - Docked Static */
-    .social-deck {
-        position: relative;
-        /* Dock it relative to flow */
-        bottom: auto;
-        left: auto;
-        transform: none;
-        width: 100%;
-        max-width: none;
-        padding: 0;
-        margin-top: 3rem;
-        /* Add space from buttons */
+    /* Moved to max-width: 1024px query below to cover tablets/larger phones */
+    /*
+    .social-deck { ... }
+    */
+
+    /* Avatar Sizing */
+    .about-img-wrapper {
+        width: 200px;
+        height: 200px;
         margin-bottom: 2rem;
-        justify-content: center;
-        background: transparent;
-        /* Remove box */
-        backdrop-filter: none;
-        -webkit-backdrop-filter: none;
-        border: none;
-        box-shadow: none;
-        flex-wrap: wrap;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-        /* Increase gap for touch */
-        /* Increase gap for touch */
-    }
-
-    .social-deck:hover {
-        background: transparent;
-        box-shadow: none;
-        transform: none;
-    }
-
-    .social-deck::after {
-        display: none;
-    }
-
-    /* Disable animations for social icons on mobile */
-    .social-icon {
-        transition: none !important;
-        transform: none !important;
-    }
-
-    .social-icon:hover,
-    .social-icon:active {
-        transform: none !important;
-        background: transparent !important;
-        /* Optional: remove hover bg too if desired, keeping simple */
     }
 
     /* Avatar Sizing */
@@ -2178,5 +2149,58 @@ button {
 @keyframes shine {
     to {
         background-position: 200% center;
+    }
+}
+
+/* Social Deck Mobile/Tablet Fix (up into 1024px) */
+@media (max-width: 1024px) {
+    .social-deck {
+        position: relative;
+        /* Dock it relative to flow */
+        bottom: auto;
+        left: auto;
+        transform: none;
+        width: 100%;
+        max-width: none;
+        padding: 0;
+        margin-top: 3rem;
+        /* Add space from buttons */
+        margin-bottom: 2rem;
+        justify-content: center;
+        background: transparent;
+        /* Remove box */
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        border: none;
+        box-shadow: none;
+        flex-wrap: wrap;
+        gap: 1rem;
+        /* Slightly larger gap */
+    }
+
+    .social-deck:hover {
+        background: transparent;
+        box-shadow: none;
+        transform: none;
+    }
+
+    .social-deck::after {
+        display: none;
+    }
+
+    /* Disable animations/floating effects for social icons */
+    .social-icon {
+        transition: none;
+        transform: none !important;
+        width: 3.5rem;
+        /* Larger touch target */
+        height: 3.5rem;
+    }
+
+    .social-icon:hover,
+    .social-icon:active {
+        transform: none !important;
+        background: rgba(255, 255, 255, 0.05);
+        /* Subtle feedback */
     }
 }
